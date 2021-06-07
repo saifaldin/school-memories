@@ -1,0 +1,25 @@
+{
+  "name": "school-memories",
+  "version": "1.0.0",
+  "description": "School database for tasks, and memory performance enhancement for image management",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifaldin/school-memories.git"
+  },
+  "author": "Seif-Eldeen Ibrahem <seifeldeen3388@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saifaldin/school-memories/issues"
+  },
+  "homepage": "https://github.com/saifaldin/school-memories#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "jest": "27.0.4"
+  }
+}
