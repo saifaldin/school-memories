@@ -3,10 +3,8 @@ const Schema = mongoose.Schema;
 const { ObjectId } = mongoose.Schema.Types;
 
 const StudentSchema = new Schema({
-  Name: {
-    type: String
-  },
-  Class: { type: ObjectId, ref: 'schoolClass' }
+  name: { type: String },
+  class: { type: ObjectId, ref: 'schoolClass' }
 });
 
 const Student = mongoose.model('student', StudentSchema);

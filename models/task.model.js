@@ -3,16 +3,9 @@ const Schema = mongoose.Schema;
 const { ObjectId } = mongoose.Schema.Types;
 
 const TaskSchema = new Schema({
-  Number: {
-    type: Number
-  },
-  Group: [
-    {
-      type: ObjectId,
-      ref: 'student'
-    }
-  ],
-  Class: { type: ObjectId, ref: 'schoolClass' }
+  number: { type: Number },
+  group: [{ type: ObjectId, ref: 'student' }],
+  class: { type: ObjectId, ref: 'schoolClass' }
 });
 
 const Task = mongoose.model('task', TaskSchema);

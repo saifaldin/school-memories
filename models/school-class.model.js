@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const SchoolClassSchema = new Schema({
-  Number: {
-    type: Number
-  }
+  number: { type: Number }
 });
 
 const SchoolClass = mongoose.model('schoolClass', SchoolClassSchema);
