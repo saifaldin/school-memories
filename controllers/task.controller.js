@@ -2,7 +2,7 @@ const Task = require('../models/task.model');
 const TaskImage = require('../models/task-image.model');
 
 // Main task: utility function
-const imageGenerator = async group => {
+exports.imageGenerator = async group => {
   try {
     const foundTask = await TaskImage.findOne({ group });
     if (foundTask) return false;
@@ -16,12 +16,12 @@ const imageGenerator = async group => {
 };
 
 // Main task: Request handler for generating image
-exports.generateImage = async (req, res) => {
+exports.createImage = async (req, res) => {
   try {
     const { group } = req.body;
-    const notFoundImage = await imageGenerator(group);
+    const notFoundImage = await this.imageGenerator(group);
     if (notFoundImage)
-      return res.status(200).json({ message: 'image successfully generated' });
+      return res.status(200).json({ message: 'image successfully create' });
     else
       return res
         .status(400)
@@ -42,7 +42,7 @@ exports.createTask = async (req, res) => {
     // Generate image in a separate function that either
     // creates the image and return the path if successfully generated (true)
     // or respond with already generated, and the path of the past generated image (false)
-    const hasGeneratedNewImage = await imageGenerator(group);
+    const hasGeneratedNewImage = await this.imageGenerator(group);
 
     const result = await Task.create({ number, class: schoolClass, group });
     return res.status(201).json({
