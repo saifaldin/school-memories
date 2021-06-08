@@ -15,5 +15,5 @@ const TaskSchema = new Schema({
   Class: { type: ObjectId, ref: 'class' }
 });
 
-const Task = mongoose.model('student', TaskSchema);
+const Task = mongoose.model('task', TaskSchema);
 module.exports = Task;
