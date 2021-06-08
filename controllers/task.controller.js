@@ -1,11 +1,15 @@
 const Task = require('../models/task.model');
+const TaskImage = require('../models/task-image.model');
 
 // Main task: utility function
 const imageGenerator = async group => {
   try {
-    const foundTask = await Task.findOne({ group });
+    const foundTask = await TaskImage.findOne({ group });
     if (foundTask) return false;
-    else return true;
+    else {
+      await TaskImage.create({ group });
+      return true;
+    }
   } catch (error) {
     console.log(error);
   }
