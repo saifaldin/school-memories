@@ -12,7 +12,7 @@ const TaskSchema = new Schema({
       ref: 'student'
     }
   ],
-  Class: { type: ObjectId, ref: 'class' }
+  Class: { type: ObjectId, ref: 'schoolClass' }
 });
 
 const Task = mongoose.model('task', TaskSchema);

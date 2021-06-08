@@ -6,7 +6,7 @@ const StudentSchema = new Schema({
   Name: {
     type: String
   },
-  Class: { type: ObjectId, ref: 'class' }
+  Class: { type: ObjectId, ref: 'schoolClass' }
 });
 
 const Student = mongoose.model('student', StudentSchema);
