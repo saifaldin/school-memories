@@ -4,22 +4,28 @@
   "description": "School database for tasks, and memory performance enhancement for image management",
   "main": "main.js",
   "scripts": {
+    "start": "NODE_ENV=development node server.js",
+    "start:dev": "NODE_ENV=development nodemon server.js",
+    "start:prod": "NODE_ENV=production node server.js",
     "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saifaldin/school-memories.git"
   },
-  "author": "Seif-Eldeen Ibrahem <seifeldeen3388@gmail.com>",
+  "author": "Saif-Aldin Ibrahem <saifaldin3388@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/saifaldin/school-memories/issues"
   },
   "homepage": "https://github.com/saifaldin/school-memories#readme",
   "dependencies": {
-    "express": "4.17.1"
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "mongoose": "5.12.13"
   },
   "devDependencies": {
+    "eslint": "7.28.0",
     "jest": "27.0.4"
   }
 }
